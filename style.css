@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; 
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 95%;
+    max-width: 700px;
+    min-height: 70vh;
+    margin: 40px auto;
+    border-radius: 25px;
+    background: rgba(10, 10, 10, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: white;
+    padding: 20px;
+}
+
+/* Search */
+.search {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    padding: 12px 18px;
+    width: 100%;
+    max-width: 500px;
+    border: none;
+    border-radius: 50px;    
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.search button {
+    padding: 20px 24px;
+    border-radius: 50%;
+    background-color: #ffffff22;
+    border: none;
+    font-size: 2em;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search button:hover {
+    background-color: #ffffff44;
+}
+
+/* Weather Image */
+.weather-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.weather-image img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+}
+
+/* Temp and City */
+.temp {
+    display: flex;
+    justify-content: center;
+    font-size: 4.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.city {
+    display: flex;
+    justify-content: center;
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Humidity and Wind */
+.last {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.humidity {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5em;
+    flex: 1 1 40%;
+}
+.wind {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5em;
+    flex: 1 1 40%;
+}
+.humidity-icon, .wind-icon {
+    font-size: 2em;
+}
+
+.humidity-value, .wind-value {
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+}
