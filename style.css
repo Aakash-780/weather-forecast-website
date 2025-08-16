@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif; 
+    font-family: Arial, sans-serif;
     background-image: url("images/background.png");
     background-size: cover;
     background-attachment: fixed;
@@ -17,7 +17,7 @@ body {
 
 .container {
     width: 95%;
-    max-width: 700px;
+    max-width: 500px;
     min-height: 70vh;
     margin: 40px auto;
     border-radius: 25px;
@@ -34,10 +34,13 @@ body {
 .search {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    align-items: center;
+    /* vertically align */
+    gap: 10px;
+    /* space between input & button */
     margin-bottom: 30px;
 }
+
 
 .input {
     display: flex;
@@ -46,7 +49,7 @@ body {
     width: 100%;
     max-width: 500px;
     border: none;
-    border-radius: 50px;    
+    border-radius: 50px;
     font-size: 1.5em;
     font-weight: bold;
 }
@@ -56,7 +59,7 @@ body {
     border-radius: 50%;
     background-color: #ffffff22;
     border: none;
-    font-size: 2em;
+    font-size: 1em;
     color: black;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -75,8 +78,7 @@ body {
 }
 
 .weather-image img {
-    width: 100%;
-    max-width: 380px;
+    width: 250px;
     height: auto;
 }
 
@@ -84,7 +86,7 @@ body {
 .temp {
     display: flex;
     justify-content: center;
-    font-size: 4.5em;
+    font-size: 4em;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -104,7 +106,8 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
-    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 25px;
 }
 
 .humidity {
@@ -115,6 +118,7 @@ body {
     font-size: 1.5em;
     flex: 1 1 40%;
 }
+
 .wind {
     display: flex;
     justify-content: right;
@@ -123,12 +127,59 @@ body {
     font-size: 1.5em;
     flex: 1 1 40%;
 }
-.humidity-icon, .wind-icon {
+
+.humidity-icon,
+.wind-icon {
     font-size: 2em;
 }
 
-.humidity-value, .wind-value {
+.humidity-value,
+.wind-value {
     font-size: 1em;
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .temp {
+        font-size: 2em;
+    }
+
+    .city {
+        font-size: 2em;
+    }
+
+    .city img {
+        height: auto;
+        width: 150px;
+    }
+
+    .input {
+        font-size: 10px;
+    }
+
+    .search button {
+        padding: 14px 14px;
+    }
+
+    .weather-image img {
+        width: 150px;
+        height: auto;
+    }
+
+    .fa-water {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 460px) {
+    .last {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* ✅ left alignment */
+        padding-top: 60px;
+        padding-bottom: 25px;
+        text-align: left;
+    }
 }
